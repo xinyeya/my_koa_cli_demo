@@ -655,8 +655,10 @@ module.exports = app
 
 数据库操作类：`modules/db.js`
 ```js
-var { MongoClient } = require('mongodb')
-var Config = require('./config')
+const MongoDB = require('mongodb'),
+    MongoClient = MongoDB.MongoClient,
+    ObjectID = MongoDB.ObjectID,
+    Config = require('./config')
 
 class Db {
 
@@ -740,7 +742,7 @@ class Db {
     remove (collectionName, json) {
         return new Promise((resolve, reject) => {
             this.connect().then(db => {
-                db.collection(collectionName).remove(json, (err, data)=>{
+                db.collection(collectionName).deleteMany(json, (err, data)=>{
                     if (!err) {
                         resolve(data)
                     }
@@ -748,6 +750,11 @@ class Db {
                 })
             })
         })
+    }
+
+    // mongodb里面查询 _id把字符串转为对象
+    getObjectId (id) {
+        return new ObjectID(id)
     }
 }
 
