@@ -16,7 +16,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1bq7Jt8UF4pAWfTXG2qpuOOxC57" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -49,7 +53,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589347700636</updated>
-      <workItem from="1589347702083" duration="5420000" />
+      <workItem from="1589347702083" duration="6034000" />
+      <workItem from="1589420374658" duration="6000" />
     </task>
     <servers />
   </component>
